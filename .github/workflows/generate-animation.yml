@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   generate:
@@ -14,12 +14,14 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: generate github-contribution-grid-snake.svg
-        uses: Platane/snk@master
+        uses: Platane/snk/svg-only@v2
         with:
           github_user_name: ${{ github.repository_owner }}
-          svg_out_path: dist/github-contribution-grid-snake.svg
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#bd93f9&color_dots=#44475a,#8be9fd,#50fa7b,#ffb86c,#ff79c6
       - name: push github-contribution-grid-snake.svg to the snake branch
-        uses: crazy-max/ghaction-github-pages@v2.5.0
+        uses: crazy-max/ghaction-github-pages@v2.6.0
         with:
           target_branch: snake
           build_dir: dist
