@@ -4,3 +4,5 @@
 
 ![Github Contribution](https://raw.githubusercontent.com/GreatWizard/GreatWizard/snake/github-contribution-grid-snake.svg#gh-light-mode-only)
 ![Github Contribution](https://raw.githubusercontent.com/GreatWizard/GreatWizard/snake/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
+
+[![@greatwizard's Holopin board](https://holopin.me/greatwizard)](https://holopin.io/@greatwizard)
